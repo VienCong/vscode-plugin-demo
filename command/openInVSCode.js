@@ -1,7 +1,7 @@
 const vscode = require("vscode");
 const { execSync } = require("child_process");
 
-const activeOpenInVSCode = (context) => {
+const activeOpenInVSCodeCommand = (context) => {
   let disposable = vscode.commands.registerCommand(
     "openInVSCode",
     async (resourceUri) => {
@@ -12,4 +12,4 @@ const activeOpenInVSCode = (context) => {
   context.subscriptions.push(disposable);
 };
 
-module.exports = { activeOpenInVSCode };
+module.exports = { activeOpenInVSCodeCommand };

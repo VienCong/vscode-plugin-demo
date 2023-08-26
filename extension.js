@@ -1,9 +1,9 @@
 const { activeGetFileGitBranchCommand } = require("./command/getFileGitBranch");
-const { activeOpenInVSCode } = require("./command/openInVScode");
+const { activeOpenInVSCodeCommand } = require("./command/openInVScode");
 
 function activate(context) {
   activeGetFileGitBranchCommand(context);
-  activeOpenInVSCode(context);
+  activeOpenInVSCodeCommand(context);
 }
 
 function deactivate() {}
