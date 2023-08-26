@@ -10,27 +10,30 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:getFileState"
+    "onCommand:getFileGitBranch",
+    "onCommand:openInVSCode"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "getFileState",
-        "title": "File State"
+        "command": "getFileGitBranch",
+        "title": "Get File Git Branch"
+      },
+      {
+        "command": "openInVSCode",
+        "title": "Open In VSCode"
       }
     ],
     "menus": {
-      "editor/context": [
-        {
-          "when": "editorFocus",
-          "command": "getFileState",
-          "group": "navigation"
-        }
-      ],
+      "editor/context": [],
       "explorer/context": [
         {
-          "command": "getFileState",
+          "command": "getFileGitBranch",
+          "group": "navigation"
+        },
+        {
+          "command": "openInVSCode",
           "group": "navigation"
         }
       ]
